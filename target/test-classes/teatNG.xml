@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ThreadLocal test sanity suite" verbose="3" parallel="tests" thread-count="2">
+
+	<test name="Google Test" parallel="methods" thread-count="5">
+	<parameter name="browser" value="chrome"></parameter>
+	<classes>
+			<class name="com.qa.mytests.GoogleTest" >
+			<methods>
+			<include name="getTitleGoogle_0()" />
+			<include name="getTitleGoogle_1()" />
+			<include name="getTitleGoogle_2()" />
+			<include name="getTitleGoogle_3()" />
+			<include name="getTitleGoogle_4()" />
+			</methods>
+		</class>
+			</classes>
+	</test>
+	
+	
+	<test name="Facebook Test" parallel="methods" thread-count="4">
+	<parameter name="browser" value="firefox"></parameter>
+	<classes>
+			<class name="com.qa.mytests.FaceBookTest" >
+			<methods>
+			<include name="getTitleFacebook_0()" />
+			<include name="getTitleFacebook_1()" />
+			<include name="getTitleFacebook_2()" />
+		
+			</methods>
+		</class>
+			</classes>
+	</test>
+</suite>

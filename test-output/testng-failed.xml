@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [ThreadLocal test sanity suite]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <test name="Google Test(failed)" parallel="methods">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.qa.mytests.FaceBookTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.mytests.FaceBookTest -->
+      <class name="com.qa.mytests.GoogleTest">
+        <methods>
+          <include name="getTitleGoogle_3"/>
+          <include name="getTitleGoogle_0"/>
+          <include name="getTitleGoogle_1"/>
+          <include name="getTitleGoogle_2"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.mytests.GoogleTest -->
+    </classes>
+  </test> <!-- Google Test(failed) -->
+  <test name="Facebook Test(failed)" parallel="methods">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.qa.mytests.FaceBookTest">
+        <methods>
+          <include name="getTitleFacebook_1"/>
+          <include name="getTitleFacebook_0"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.mytests.FaceBookTest -->
+      <class name="com.qa.mytests.GoogleTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.mytests.GoogleTest -->
+    </classes>
+  </test> <!-- Facebook Test(failed) -->
+</suite> <!-- Failed suite [ThreadLocal test sanity suite] -->
